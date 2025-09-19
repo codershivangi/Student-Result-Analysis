@@ -94,6 +94,9 @@ plt.show()
 
 ax = df['EthnicGroup'].value_counts().plot(kind='bar')
 
+fig, ax = plt.subplots()
+df['gender'].value_counts().plot(kind='bar',ax=ax)
+
 for p in ax.patches:
     ax.annotate(str(p.get_height()),
                 (p.get_x() + p.get_width() / 2., p.get_height()),
